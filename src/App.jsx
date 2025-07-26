@@ -2,31 +2,35 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import ListItem from './components/List';
+import Condition from './components/condition';
 
 function App() {
-  const [count, setCount] = useState(2)
+  // const isLogin = true;
+   const [value,setvalue] = useState();
 
-  function increment () {
-     
-     setCount(count + 1);
-     console.log(count)
+  const handleChange = (e) => {
+    setvalue(e.target.value)
+  };
 
-    }
-
-  function decrement (){
-    setCount (count-1);
-
-  }  
+  const handleSubmit = () => {
+    alert("hey "+value)
+  };
   
-
-
   return (
     <>
-    <h2>Number {count}</h2>
-    <button onClick={increment}> increment</button>
-    <button onClick={decrement}>decrement</button>
+    
+
+  <form onSubmit={handleSubmit}>
+      <input type="text" onChange={handleChange}  />
+      <button type='submit'> submit </button>
+    </form>
+
     </>
   )
- }
+ };
 
-export default App
+export default App;
+
+{/* <Condition/>  */}
+
