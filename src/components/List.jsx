@@ -1,15 +1,16 @@
-function ListItem(props) {
-  console.log("props:", props)
-  
+function ListItem() {
 return (
 <div>
-    <h2> {props.title} </h2>
-    <ul>
-      <li >{props.movieOne}</li>
-      <li >{props.movieTwo}</li>
-    </ul>
+  {fruits.map ((fruit) =>{
+    <h1>Fruits</h1>})}
 </div>
 );
 }
+
+const fruits = [
+  {id: "abc -123" , name : "Apple" } ,
+  {id: "bcd -223" , name : "Orange" },
+  {id: "cde -345" , name : "Kiwi" }
+];
 
 export default ListItem;
