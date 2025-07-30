@@ -1,40 +1,34 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import ListItem from './components/List.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import User from "./components/User/User.jsx";
+import About from "./pages/About.jsx";
+import Contact from "./pages/Contact.jsx";
+import Services from "./pages/Services.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import Content from "./components/Content/content.jsx";
 
-// const dataArr = [
-//    {
-//   title : "My favourite movie" ,
-//   movieOne : "Fight Club" ,
-//   movieTwo : "The shutter island"
-// },
-//  {
-//   title : "Asin favourite movie" ,
-//   movieOne : "Oppenheimer" ,
-//   movieTwo : "Spider-man : no way home"
-// },
-//  {
-//   title : "Arshad favourite movie" ,
-//   movieOne : "Inception" ,
-//   movieTwo : "Interstellar"
-// },
-// ];
-createRoot(document.getElementById('root')).render(
-  // <div>
-  //   {dataArr.map((data) => (
-  //     <ListItem
-  //       title = {data.title}
-  //       movieOne = {data.movieOne}
-  //       movieTwo = {data.movieTwo}
-  //    />
-  //   ))}
-    
-  // </div>
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-  </StrictMode>, 
+    <BrowserRouter>
+    <Navbar/>
+    
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/*" element={<NotFound />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
+      
+    </BrowserRouter>
+    
+  </StrictMode>
 );
- 
