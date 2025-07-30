@@ -1,25 +1,17 @@
-/* img{
-  width: 10rem;
-  height: 10rem;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.card{
-  display: inline-block;
-  width: 100px;
-  margin: 50px;
-  padding: 15px;
-  background-color: darkslategray;
-}
-
-.team{
-  text-align: center;
-  align-items: center;
-  padding: 20px;
-}
 
 h1{
   color: lemonchiffon;
+  align-items: center;
+  font-style:italic;
+  font-size: 200px;
+  
+}
+body{
+  background-color: rgb(3, 0, 0);
+  align-items: center;
+  text-align:justify;
+ 
+  margin: 0;
+  padding: 0;
+}
 
-} */
