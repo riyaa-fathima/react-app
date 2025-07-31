@@ -1,0 +1,44 @@
+.card-container{
+    text-align: center;
+    padding: 30px;
+    
+}
+h4 {
+    color:rgb(11, 6, 1);
+    font-style: initial;
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    margin: 30px ;
+   
+}
+.movie-card{
+    border: 1px solid seashell;
+    height: 300px;
+    width: 150px;
+    background-color: antiquewhite;
+}
+.movie-image{
+    width: 120px;
+    height: 150px;
+    margin-top: 10px;
+}
+p{
+    color: black;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    padding-bottom: 0;
+    font-size: 15px;
+   
+}
+.movie-card, p {
+    
+    margin-top: 10px;    
+}
+.movie{
+    padding-bottom:0px ;
+    margin-bottom: 0;
+}
