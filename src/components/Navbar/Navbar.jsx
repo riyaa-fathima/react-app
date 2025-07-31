@@ -7,6 +7,8 @@ function Navbar() {
       <NavLink to="/about">ABOUT</NavLink>
       <NavLink to="/contact">CONTACT </NavLink>
       <NavLink to="/services">SERVICE </NavLink>
+
+      <button></button>
     </div>
   );
 }
