@@ -37,7 +37,7 @@ export const movies = [
       "https://www.filmibeat.com/fanimg/movie/17951/minnal-murali-photos-images-70005.jpg",
     desc: "sdfghjk",
     Cast: ["midelaj", "Riya", "asin", "arsha"],
-    CastDeta: "fghjklrtyuiotyuio"
+    CastDeta: "fghjklrtyuiotyuio",
   },
 ];
 

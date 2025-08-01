@@ -4,7 +4,7 @@
     
 }
 h4 {
-    color:rgb(11, 6, 1);
+    /* color:rgb(11, 6, 1); */
     font-style: initial;
 }
 .card{
@@ -12,14 +12,14 @@ h4 {
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
-    margin: 30px ;
+    margin: 120px ;
    
 }
 .movie-card{
-    border: 1px solid seashell;
+    /* border: 1px solid seashell; */
     height: 300px;
     width: 150px;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
 }
 .movie-image{
     width: 120px;
@@ -41,4 +41,7 @@ p{
 .movie{
     padding-bottom:0px ;
     margin-bottom: 0;
+}
+body{
+    
 }

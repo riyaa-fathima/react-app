@@ -5,12 +5,13 @@ h1{
   font-style:oblique;
   font-size: 100px;
   font-family:'Times New Roman', Times, serif;
-  padding-top: 0;
-  padding: 0;
+  padding-top: 100px;
+  padding: 200px;
+
   
 }
 body{
-  background-color: black;
+ 
   align-items: center;
   text-align:justify;
   margin: 0;
@@ -19,7 +20,7 @@ body{
 .h3style{
   color: rgb(238, 247, 188);
   font-family: 'Times New Roman', Times, serif;
-  padding-top: 30px;
+  padding-top: 300px;
   padding-bottom: 0;
   margin-bottom: 0;
 }

@@ -1,37 +1,42 @@
-import React from "react";
-// import "./App.css";
-import { useState } from "react";
+import "./App.css";
 import { useContext } from "react";
-const ThemeContext = React.createContext();
-const light = {
+import { ThemeContext, ThemeProvider } from "./context/ThemeContext";
+import User from "./components/User/User";
+
+export const light = {
   color: "black",
   backgroundColor: "white",
 };
-const dark = {
+export const dark = {
   color: "white",
   backgroundColor: "black",
 };
 
 function App() {
-  const [theme, setTheme] = useState(true);
-
-  function handleClick() {
-    setTheme(!theme);
-    console.log(theme);
-  }
-
+  // const toggleTheme= theme?light:dark;
   return (
     <>
-      <div className="main" style={theme ? light : dark }>
-        <h1 style={{color: "lemonchiffon"}}>
-          EXPLORE <br />
-          THE MOVIES <br />
-          AROUND THE WORLD
-        </h1>
-        <button onClick={handleClick} >toggle</button>
-      </div>
+      <Home />
+      <User />
     </>
   );
 }
 
 export default App;
+
+function Home(params) {
+  const { theme, handleClick, light, dark } = useContext(ThemeContext);
+
+  const toggleTheme = theme ? light : dark;
+  return (
+    <div className="main" style={toggleTheme}>
+      <h1>
+        EXPLORE <br />
+        THE MOVIES <br />
+        AROUND <br />
+        THE WORLD
+      </h1>
+      <button onClick={handleClick}>toggle</button>
+    </div>
+  );
+}
