@@ -1,14 +1,27 @@
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
-function Navbar() {
-  return (
-    <div className="navlink">
-      <NavLink to="/user">USER</NavLink>
-      <NavLink to="/about">ABOUT</NavLink>
-      <NavLink to="/contact">CONTACT </NavLink>
-      <NavLink to="/services">SERVICE </NavLink>
+import { useContext, useEffect } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
-      <button></button>
+function Navbar() {
+  const { theme, light, dark } = useContext(ThemeContext);
+  const navTheme = theme ? light : dark;
+  console.log("nav them", theme);
+  
+  return (
+    <div className="navlink" style={navTheme}>
+      <NavLink to="/user" style={navTheme}>
+        USER
+      </NavLink>
+      <NavLink to="/about" style={navTheme}>
+        ABOUT
+      </NavLink>
+      <NavLink to="/contact" style={navTheme}>
+        CONTACT{" "}
+      </NavLink>
+      <NavLink to="/services" style={navTheme}>
+        SERVICE{" "}
+      </NavLink>
     </div>
   );
 }
